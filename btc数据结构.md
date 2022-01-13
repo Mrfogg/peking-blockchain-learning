@@ -19,8 +19,7 @@
 ### merkle tree
 
 每个区块的交易组织成merkle tree的形式，叶子节点ABCD代表一笔交易
-
-![image-20220113095943316](/Users/trh/Library/Application Support/typora-user-images/image-20220113095943316.png)
+![image](https://user-images.githubusercontent.com/7734816/149287495-d39112dd-ab0e-41be-9079-f74dc0ca724f.png)
 
 上图即为一个简单的Markle Tree，其中A、B、C、D为数据块。可见，A和B各有一个哈希值，将其合并放在一个节点中，C和D同样操作，而后，针对得到的两个节点分别取哈希，又可以得到两个新的哈希值，即为图中根节点。实际中，在区块块头中存储的是根节点的哈希值（对其再取一次哈希）。
 
